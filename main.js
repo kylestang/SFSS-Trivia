@@ -7,9 +7,12 @@ let win
 function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
+        backgroundColor: '#CFCFCF',
         show: false,
         width: 800,
         height: 600,
+        minHeight: 500,
+        minWidth: 500,
         webPreferences: {
             nodeIntegration: true
         }

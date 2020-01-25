@@ -1,0 +1,46 @@
+
+
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.background{
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    min-height: 100%;
+    background-position: center;
+}
+
+.content{
+    padding-top: 7em;
+}
+
+.centerWidth{
+    text-align: center;
+}
+
+.normalButton{
+    font-size: 2em;
+    width: 6em;
+    height: 2em;
+    border: 0;
+    border-radius: 1em;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+
+#mainTitle{
+    vertical-align: middle;
+    font-size: 5em;
+}
