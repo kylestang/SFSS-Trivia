@@ -1,0 +1,15 @@
+{
+  "name": "gem",
+  "version": "1.0.0",
+  "description": "GEM Trivia",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyle Stang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.10"
+  }
+}
