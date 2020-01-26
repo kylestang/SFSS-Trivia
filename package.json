@@ -1,7 +1,7 @@
 {
-  "name": "gem",
+  "name": "SFSSTrivia",
   "version": "1.0.0",
-  "description": "GEM Trivia",
+  "description": "Students For the Salish Sea Trivia",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

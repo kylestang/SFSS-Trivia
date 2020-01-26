@@ -1,1 +1,1 @@
-# Trivia app for GEM
+# Trivia app for SFSS

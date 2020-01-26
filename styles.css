@@ -15,20 +15,32 @@ html, body{
 }
 
 .content{
-    padding-top: 7em;
+    padding-top: 1em;
 }
 
 .centerWidth{
     text-align: center;
 }
 
-.normalButton{
-    font-size: 2em;
-    width: 6em;
-    height: 2em;
-    border: 0;
-    border-radius: 1em;
+.normalButton {
+	background-color:#dedede;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:20px;
+	padding:16px 31px;
+	text-decoration:none;
 }
+.normalButton:hover {
+	background-color:#95d8de;
+}
+.normalButton:active {
+	position:relative;
+	top:1px;
+}
+
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -40,7 +52,47 @@ html, body{
                                     supported by Chrome, Opera and Firefox */
 }
 
+.correct{
+    font-size: 1em;
+    background-color: green;
+    opacity: 0.8;
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+}
+
+.wrong{
+    font-size: 1em;
+    background-color: red;
+    opacity: 0.8;
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+}
+
+.option{
+    font-size: 1em;
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
+}
+
+.hover:hover {
+	background-color:#95d8de;
+}
+
 #mainTitle{
     vertical-align: middle;
     font-size: 5em;
+    margin-top: 2em;
+}
+
+#question{
+    padding: 1em;
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    font-size: 2em;
 }

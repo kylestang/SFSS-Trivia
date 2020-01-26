@@ -1,3 +1,0 @@
-
-background.jpg:
-    Photo by Sean O. on Unsplash
