@@ -44,6 +44,13 @@ class Questions {
             "Correct answer", "Wrong answer", "Still wrong", "Nope");
         }
     }
+
+    remove(toRemove){
+        let index = this.questions.indexOf(toRemove);
+        if(index !== -1){
+            this.questions.splice(index, 1);
+        }
+    }
 }
 
 let list = new Questions();

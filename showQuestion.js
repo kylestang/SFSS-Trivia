@@ -11,13 +11,17 @@ function showCorrect(currentQuestion, clicked){
                 anOption.classList.add("wrong");
             }
             anOption.classList.remove("hover");
+            anOption.classList.add("disabled")
         }
 
         div_content = document.getElementById("questionContent");
         nextButton = document.createElement("P");
+        nextButton.style.bottom = "0";
         nextButton.innerHTML = "Next";
         nextButton.className = "normalButton hover noselect";
         nextButton.id = "nextButton";
+        nextButton.style.marginLeft = "2em";
+        nextButton.style.marginBottom = "2em";
         nextButton.addEventListener("click", loadNextQuestion);
         div_content.appendChild(nextButton);
 

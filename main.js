@@ -9,7 +9,7 @@ function createWindow() {
     win = new BrowserWindow({
         backgroundColor: '#CFCFCF',
         show: false,
-        width: 800,
+        width: 900,
         height: 600,
         minHeight: 500,
         minWidth: 500,

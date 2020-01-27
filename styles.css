@@ -1,5 +1,13 @@
 
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .background {
+    animation: fadein 4s;
+  }
+
 html, body{
     margin: 0;
     height: 100%;
@@ -7,15 +15,24 @@ html, body{
     color: white;
 }
 
+h2{
+    margin: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .background{
     background-image: url(img/background.jpg);
     background-size: cover;
     min-height: 100%;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .content{
-    padding-top: 1em;
+    padding-top: 1px;
 }
 
 .centerWidth{
@@ -24,23 +41,20 @@ html, body{
 
 .normalButton {
 	background-color:#dedede;
-	border-radius:42px;
+	border-radius:2em;
 	display:inline-block;
 	cursor:pointer;
 	color:#000000;
 	font-family:Arial;
-	font-size:20px;
-	padding:16px 31px;
+	font-size:1em;
+	padding:1em 2em;
 	text-decoration:none;
 }
-.normalButton:hover {
-	background-color:#95d8de;
-}
+
 .normalButton:active {
 	position:relative;
 	top:1px;
 }
-
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -77,16 +91,44 @@ html, body{
     color: black;
     padding: 1em;
     padding-left: 2em;
+    cursor: pointer;
+}
+
+.inputBox{
+    font-size: 1em;
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    padding: 1em;
+    border-radius: 2em;
+    border-style: none;
+}
+
+.disabled{
+    cursor: auto;
 }
 
 .hover:hover {
 	background-color:#95d8de;
 }
 
-#mainTitle{
+.mainTitle{
     vertical-align: middle;
     font-size: 5em;
-    margin-top: 2em;
+    margin-top: 10%;
+}
+
+.modifyInput{
+    width: 80%;
+}
+
+.viewQuestion{
+    font-size: 1em;
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    padding: 1em;
+    padding-left: 2em;
 }
 
 #question{
@@ -95,4 +137,22 @@ html, body{
     opacity: 0.8;
     color: black;
     font-size: 2em;
+    text-align: center;
+}
+
+#startButton{
+    width: 8em;
+    margin-right: 2em;
+}
+
+#modifyButton{
+    width: 8em;
+}
+
+#modifyDiv{
+
+}
+
+#backButton{
+    width: 17em;
 }
