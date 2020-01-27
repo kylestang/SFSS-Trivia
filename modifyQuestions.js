@@ -23,6 +23,7 @@ function updateQuestions(){
         p_newButton.innerHTML = "Delete";
         p_newButton.addEventListener("click", () =>{
             list.remove(currentQuestion);
+            list.save();
             updateQuestions();
         })
 
@@ -36,10 +37,14 @@ addButton.addEventListener("click", () => {
         new Question(questionInput.value, correctInput.value,
             wrong1Input.value, wrong2Input.value, wrong3Input.value)
     );
+    list.save();
     updateQuestions();
     questionInput.value = "";
     correctInput.value = "";
     wrong1Input.value = "";
     wrong2Input.value = "";
     wrong3Input.value = "";
-})
+});
+
+list.load();
+updateQuestions();

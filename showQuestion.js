@@ -1,4 +1,6 @@
 
+
+
 function showCorrect(currentQuestion, clicked){
     if(!answered){
         for(let i = 0; i < 4; i++){
@@ -36,6 +38,8 @@ function loadNextQuestion(){
 
     answered = false;
     currentQuestion = list.getNext();
+    console.log(currentQuestion);
+    console.log(list);
     currentQuestion.shuffleOptions();
     
     p_question.innerHTML = currentQuestion.question;
@@ -58,4 +62,5 @@ let p_option3 = document.getElementById("option2");
 let p_option4 = document.getElementById("option3");
 let p_options = [p_option1, p_option2, p_option3, p_option4];
 
+list.load();
 loadNextQuestion();

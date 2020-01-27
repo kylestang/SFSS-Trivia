@@ -1,3 +1,6 @@
+const Store = require('electron-store');
+const store = new Store();
+
 class Question {
     constructor(question, correct, fake1, fake2, fake3) {
         this.question = question;
@@ -49,6 +52,22 @@ class Questions {
         let index = this.questions.indexOf(toRemove);
         if(index !== -1){
             this.questions.splice(index, 1);
+        }
+    }
+
+    save(){
+        store.set("questions", this.questions);
+    }
+
+    load(){
+        let loaded = store.get("questions", null);
+        if(loaded != null){
+            console.log(loaded);
+            for(let i = 0; i < loaded.length; i++){
+                let toAdd = new Question();
+                Object.assign(toAdd, loaded[i]);
+                this.questions.push(toAdd);
+            }
         }
     }
 }
