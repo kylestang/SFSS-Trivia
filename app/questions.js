@@ -62,7 +62,6 @@ class Questions {
     load(){
         let loaded = store.get("questions", null);
         if(loaded != null){
-            console.log(loaded);
             for(let i = 0; i < loaded.length; i++){
                 let toAdd = new Question();
                 Object.assign(toAdd, loaded[i]);
@@ -73,4 +72,3 @@ class Questions {
 }
 
 let list = new Questions();
-//list.questions.push(new Question("What colour is the Salish Sea?", "Blue", "Mauve", "Orange", "Four"));
