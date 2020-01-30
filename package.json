@@ -1,16 +1,47 @@
 {
-  "name": "SFSSTrivia",
+  "name": "sfss-trivia",
   "version": "1.0.0",
   "description": "Students For the Salish Sea Trivia",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron .",
+    "pack": "build --dir",
+    "dist": "build"
   },
-  "author": "Kyle Stang",
-  "license": "ISC",
+  "author": "Kyle Stang, kylestang.ks@gmail.com",
+  "license": "MIT",
+  "build": {
+    "appId": "SFSS Trivia",
+    "category": "trivia",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
   "devDependencies": {
-    "electron": "^7.1.10"
+    "electron": "^7.1.10",
+    "electron-builder": "^22.3.2"
   },
   "dependencies": {
     "electron-store": "^5.1.0"
