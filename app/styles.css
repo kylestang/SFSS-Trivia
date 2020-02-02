@@ -48,7 +48,8 @@ textarea:focus, input:focus{
 	font-family:Arial;
 	font-size:1em;
 	padding:1em 2em;
-	text-decoration:none;
+    text-decoration:none;
+    margin-top: 01em;
 }
 
 .normalButton:active {
@@ -152,6 +153,7 @@ textarea:focus, input:focus{
 
 #backButton{
     width: 17em;
+    margin-top: 0;
 }
 
 #homeButton{

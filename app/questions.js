@@ -11,14 +11,14 @@ class Question {
     shuffleOptions() {
         var currentIndex = this.options.length, temporaryValue, randomIndex;
 
-        // While there remain elements to shuffle...
+        // While there remain elements to shuffle
         while (0 !== currentIndex) {
 
-            // Pick a remaining element...
+            // Pick a remaining element
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
 
-            // And swap it with the current element.
+            // And swap it with the current element
             temporaryValue = this.options[currentIndex];
             this.options[currentIndex] = this.options[randomIndex];
             this.options[randomIndex] = temporaryValue;
@@ -27,27 +27,41 @@ class Question {
 }
 
 class Questions {
+
     constructor() {
         this.questions = [];
         this.current = 0;
     }
 
+    // Create default question in case questions list is empty
+    defaultQuestion = new Question(
+        "This is a sample question that only appears when you have no questions.\
+         Add questions from the start menu",
+        "Correct answer", "Wrong answer", "Still wrong", "Nope");
+
+    // return the next question in the list,
+    // or first question if at end
     getNext(){
+
+        // If the list has questions
         if(this.questions.length > 0){
             this.current++;
+
+            // If at the end, restart at question 0
             if(this.current >= this.questions.length){
                 this.current = 0;
             }
+
+            // Return the next question
             return this.questions[this.current];
         }
+        // If no questions, return the default question
         else{
-            return new Question(
-            "This is a sample question that only appears when you have no questions.\
-             Add questions from the start menu",
-            "Correct answer", "Wrong answer", "Still wrong", "Nope");
+            return this.defaultQuestion;
         }
     }
 
+    // Remove question at index
     remove(toRemove){
         let index = this.questions.indexOf(toRemove);
         if(index !== -1){
@@ -55,10 +69,12 @@ class Questions {
         }
     }
 
+    // Save this set of questions
     save(){
         store.set("questions", this.questions);
     }
 
+    // Load the questions
     load(){
         let loaded = store.get("questions", null);
         if(loaded != null){
@@ -70,5 +86,3 @@ class Questions {
         }
     }
 }
-
-let list = new Questions();
